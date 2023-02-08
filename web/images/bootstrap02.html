@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 배우기2</title>
+    <!-- 부트스트랩 소스  -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- 폰트 연결 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 class="text-center">
+        <i class="fas fa-arrow-circle-right"></i>
+        부트스트랩 배우기2
+    </h1>
+    <hr />
+    <h2>그리드</h2>
+    <!-- 다단 레이아웃. 12개가 한행에 표시되는 그리드 
+        https://www.w3schools.com/bootstrap4/bootstrap_grid_basic.asp -->
+    <hr>
+    <h3>4단 그리드</h3>
+    <div class="row">
+      <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-3">.col-sm-3</div>
+    </div>
+    <h3>2단 그리드</h3>
+    <div class="row">
+      <div class="col-sm-6">.col-sm-6</div>
+      <div class="col-sm-6">.col-sm-6</div>
+    </div>
+    <h3>3단 그리드</h3>
+    <div class="row">
+      <div class="col-sm-2">.col-sm-2</div>
+      <div class="col-sm-2">.col-sm-2</div>
+      <!-- 12를 넘어가면 다음행으로 표시 -->
+      <div class="col-sm-8">.col-sm-8</div>
+    </div>
+    <hr>
+    <div class="container">
+        <h2>Grid System</h2>
+        <div class="row">
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+            <div class="col-sm-1 text-center">1</div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-sm-3 text-center">3</div>
+            <div class="col-sm-9 text-center">9</div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-sm-2 text-center">2</div>
+            <div class="col-sm-2 text-center">2</div>
+            <div class="col-sm-2 text-center">2</div>
+            <div class="col-sm-2 text-center">2</div>
+            <div class="col-sm-2 text-center">2</div>
+            <div class="col-sm-4 text-center">4</div>
+        </div>
+    </div>
+    <h2>폼</h2>
+    <hr>
+    <div class="container">
+        <form action="#">
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" class="form-control" placeholder="Enter email" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember me
+              </label>
+            </div>
+            <div class="text-center">    
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>  
+        </form>
+    </div>
+</body>
+</html>

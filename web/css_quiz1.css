@@ -1,0 +1,43 @@
+#quizBox1{
+    width: 400px;
+    margin: 50px auto;
+}
+
+#quizBox1 h3{
+    text-align: center;
+}
+
+#quizBox1 ul {
+    border: 1px dotted hotpink;
+    border-radius: 15px;
+    padding: 20px;
+    list-style-type: none;
+    line-height: 180%;
+}
+
+#quizBox1 ul li {
+    margin-left:20px;
+    font-size: 13px;
+}
+
+#quizBox1 ul li:nth-child(1){
+    list-style-image: url(images/images_icon/num1.gif);
+}
+
+#quizBox1 ul li:nth-child(2){
+    list-style-image: url(images/images_icon/num2.gif);
+}
+
+#quizBox1 ul li:nth-child(3){
+    list-style-image: url(images/images_icon/num3.gif);
+}
+
+#quizBox1 ul li:nth-child(4){
+    list-style-image: url(images/images_icon/num4.gif);
+}
+
+#quizBox1 ul li:nth-child(5){
+    list-style-image: url(images/images_icon/num5.gif);
+}
+
+#quizBox2 ul {font-size:x-small;}

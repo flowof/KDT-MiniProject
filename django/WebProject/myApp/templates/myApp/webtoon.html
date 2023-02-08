@@ -1,0 +1,67 @@
+{% extends 'myApp/base.html' %}
+{% block content %}
+<div class="col-xs-12 col-sm-11 col-md-7 col-lg-5 main_box">
+    <nav class="main_nav">
+        <div class="nav_search">
+            <a href="/user/">
+                <img src="/static/myApp/images/arrow-left-solid.svg" width="20px"/>
+            </a>
+            <span class="webtoon_title">{{webtoon_data.title}}</span>
+            <div class="nav_icon">
+                <a href="/user/search/{{webtoon_data.id}}/deleteCon/">
+                    <img src="/static/myApp/images/trash-alt-regular.svg" class="icon_delete" />
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="row content webtoon_detail">
+        <div class="webtoon_detail_img col-4">
+            <div style="background-image: url('{{webtoon_data.thumbnail}}');"></div>
+        </div>
+        <div class="webtoon_detail_info col-8">
+            <p class="title">
+                {% if webtoon_data.age == '12세 이용가' %}
+                <span class="age_12">⑫</span>
+                {% elif webtoon_data.age == '15세 이용가' %}
+                <span class="age_15">⑮</span>
+                {% elif webtoon_data.age == '18세 이용가' %}
+                <span class="age_18">⑱</span>
+                {% else %}
+                <span class="age_all">ⓐ</span>
+                {% endif %}
+                &nbsp;{{webtoon_data.title}}
+            </p>
+            <p class="writer">{{webtoon_data.author}}</p>
+            <p class="etc">{{webtoon_data.genre}}</p>
+            <p class="etc">{{webtoon_data.company}} · {{webtoon_data.week}}</p>
+        </div>
+        <div class="webtoon_detail_description col-12">
+            <p>&nbsp;{{webtoon_data.summary}}</p>
+        </div>
+
+        <div class="webtoon_detail_link col-12">
+            <a href="{{ webtoon_data.URL }}" target="_blank" class="btn btn-outline-primary">바로가기</a>
+        </div>
+    </div>
+    <div class="row content wetoon_comment">
+        <div class="col-6 title">
+            {{ webtoon_data.title }} 감상평
+        </div>
+        <div class="col-6 buttons">
+            {% if save_data.comment %}
+            <a href="/user/webtoon/{{webtoon_data.id}}/update/" class="btn btn-sm btn-outline-warning">수정</a>
+            <a href="/user/webtoon/{{webtoon_data.id}}/deleteCon/" class="btn btn-sm btn-outline-danger">삭제</a>
+            {% else %}
+            <a href="/user/webtoon/{{webtoon_data.id}}/create/" class="btn btn-sm btn-outline-success">등록</a>
+            {% endif %}
+        </div>
+        <div class="col-12 wetoon_commnet_content">
+            {% if save_data.comment %}
+            {{save_data.comment}}
+            {% else %}
+            등록된 감상평이 없습니다.
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

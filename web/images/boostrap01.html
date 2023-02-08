@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 배우기1</title>
+    <!-- 부트스트랩 소스 -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- 폰트 연결 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <!-- 사용자정의 css -->
+<style>
+    #gallery {display: block; margin: 20px auto; border: 10px  double lightcoral; padding: 10px;}
+</style>
+</head>
+<body>
+    <h1>부트스트랩 배우기1</h1>
+    <hr />
+    <h2>이미지 디자인</h2>
+    <img src="images/flower.jpg" alt="수련">
+    <br><br>
+    <img src="images/flower.jpg" alt="수련" class="img-thumbnail">
+    <br><br>
+    <img src="images/flower.jpg" alt="수련" class="rounded-circle">
+    <br><br>
+    <!-- 중앙배치 -->
+    <img src="images/flower.jpg" alt="수련" class="mx-auto d-block">
+    <br><br>
+    <!-- 중앙배치 +썸네일 디자인 -->
+    <img src="images/flower.jpg" alt="수련" class="mx-auto d-block img-thumbnail">
+    <br><br>
+    <!-- 반응형 디자인 -->
+    <div class="jumbotron text-center">
+        <h1>My First Bootstrap page</h1>
+        <p>Resize this responsive page to see the effect</p>
+        <img src="images/flower.jpg" alt="수련" class="img-fluid">
+    </div>
+
+    <!-- 부트스트랩 +사용자정의 디자인 -->
+    <!-- 인라인방식으로 디자인 추가 -->
+    <img 
+        src="images/flower.jpg" 
+        alt="수련" 
+        class="rounded"
+        style="border: 5px solid black;">
+    <br><br>
+    <img src="images/flower.jpg" alt="수련" class="">
+    
+    <!-- 아이디 지정 후 디자인 적용 -->
+    <img src="images/flower.jpg" alt="수련" class="rounded" id="gallery"/>
+    <hr />
+    <h2>버트 디자인</h2>
+    <!-- a, button, input:reset, input:submit 태그에 적용 -->
+    <a href="http://google.com" target="_blank" class="btn btn-danger" role="button">Google</a>
+    <button type="button" class="btn btn-outline-dark">login</button>
+    <!-- 가로 100% -->
+    <input type="button" class="btn btn-warning btn-block" value="Click">
+    <input type="submit" class="btn btn-success btn-block" value="Submit">
+
+    <hr>
+    <h2>리스트</h2>
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_list_groups.asp -->
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item active">Active item</li>
+            <li class="list-group-item">Second item</li>
+            <li class="list-group-item">Third item</li>
+          </ul>
+          <hr>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item active">Active item</li>
+            <li class="list-group-item">Second item</li>
+            <li class="list-group-item">Third item</li>
+          </ul>
+    </div>
+
+    <h2>테이블</h2>
+    <hr>
+    <div class="container">
+        <h2>Hoverable Dark Table</h2>
+        <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>            
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container">
+        <h2>Table2</h2>
+        <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>            
+        <table class="table table-bordered" style="width: 500px; margin: 20px auto;">
+          <thead>
+            <tr class="table-dark text-dark">
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <h2>아이콘</h2>
+      <!--  -->
+      <!--폰트 코드값 https://www.w3schools.com/icons/icons_reference.asp -->
+      <!-- span, i, em, b, strong 태그에 class='fas 폰트코드값' -->
+      <p>
+        <i class='fas fa-battery-three-quarters' style='font-size:100px;color: green'></i>
+        <span class='fas fa-search'></span>
+        <b class='fas fa-signal' ></b>
+      </p>
+      <hr>
+      <h2>타이포그라피</h2>
+      <!-- https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+      <p class="text-center">
+          복사 단축키는 <kbd>Ctrl</kbd> + <kbd>C</kbd> <br><br>
+          웹표준의 요소는 <mark>HTML</mark>,
+          <mark>CSS</mark>,
+          <mark>JS</mark>
+      </p>
+      <hr>
+      <p class="text-right">
+          공유자료실 주소는 여기를 클릭 => <a href="http://naver.me/x2P77qyv">네이버박스</a>
+      </p>
+
+
+    <div class="jumbotron text-center">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Column 1</h3>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Column 3</h3>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>

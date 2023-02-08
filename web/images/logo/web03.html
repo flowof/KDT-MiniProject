@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 배우기3</title>
+</head>
+<body>
+    <h1>HTML 배우기3</h1>
+    <hr>
+    <form action="">
+        <h2>텍스트필드와 라벨</h2>
+        <!-- label의 for값은 input 태그의 id와 연결 -->
+        <label for="input1">제목</label>
+        <input type="text" id="input1">
+
+        <hr>
+        <label for="pwd">암호</label>
+        <input type="password" id="pwd">
+
+        <hr>
+        <h2>라디오버튼과 체크박스</h2>
+        <b>성별 선택</b>
+        <!-- 라디오버튼 주의사항:같은 라디오 그룹 안에서는 name값이 동일 -->
+        <label for="gender1">남자</label>
+        <input type="radio" id="gender1" name="gender">
+        <label for="gender2">여자</label>
+        <input type="radio" id="gender2" name="gender">
+
+        <hr>
+        <label for="emailcheck">메일 수신</label>
+        <input type="checkbox" id="emailcheck" checked>
+
+        <h2>email</h2>
+        <label for="userEmail">email</label>
+        <input type="email" id="userEmail">
+
+        <hr>
+        <h2>셀렉트 메뉴</h2>
+        <label for="userJob">직업</label>
+        <select name="" id="userJob">
+            <option>----------선택하세요----------</option>
+            <option value="">학생</option>
+            <option value="">자영업</option>
+            <option value="">회사원</option>
+            <option value="">기타</option>
+        </select>
+
+        <hr>
+        <h2>여러줄 글상자</h2>
+        <label for="message">메시지 입력</label><br>
+        <textarea name="" id="message" cols="30" rows="10">입력하세요</textarea>
+
+
+        <hr>
+        <h2>폼버튼</h2>
+        <button>전송1</button>
+        <input type="submit" value="전송2">
+        <input type="reset" value="취소">
+
+        <hr>
+        <h2>필드셋과 레전드</h2>
+        <fieldset>
+            <legend>취미</legend>
+            <label for="hobby1">등산</label>
+            <input type="checkbox" name="" id="hobby1">
+            <label for="hobby2">게임</label>
+            <input type="checkbox" name="" id="hobby2">
+            <label for="hobby3">사진</label>
+            <input type="checkbox" name="" id="hobby3">
+        </fieldset>
+
+        <hr>
+        <h2>time과 date</h2>
+        <label for="userDate">예약날짜</label>
+        <input type="date" name="" id="userDate">
+        <label for="userTime">예약시간</label>
+        <input type="time" name="" id="userTime">
+
+
+
+
+
+    </form>
+    
+</body>
+</html>
+

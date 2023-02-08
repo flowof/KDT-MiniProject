@@ -1,0 +1,43 @@
+/* css04.html 문서와 연결 */
+body{
+    background-color: lightgray;
+    margin: 50px;
+}
+
+h1 { text-align: center;}
+
+/*
+    테이블관련 css 속성
+    // table 태그에 적용
+    border-collaps:collapse
+*/
+.table1{
+    border-collapse: collapse;
+}
+/*1행 디자인*/
+.table1 tr:first-child{
+    border-top: 5px solid orangered;
+}
+.table1 tr td{
+    border: 1px solid black;
+    padding: 5px 20px;
+}
+
+/* 마지막행의 마지막 셀 */
+.table1 tr:last-of-type {
+    background-color: black;
+    color: white;
+}
+
+/* 2행 2열 셀 */
+.table1 tr:nth-child(2) td:nth-child(2) {
+    background-color: red;
+    color: white;
+}
+
+/* 1행의 모든 셀 */
+.table1 tr:first-child td {
+    background-color: white;
+}
+
+

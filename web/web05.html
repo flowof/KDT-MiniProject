@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 배우기5</title>
+</head>
+<body>
+    <h1>HTML 배우기5</h1>
+    <hr>
+    <h2>iframe</h2>
+    <div>
+        <ul>
+            <li><a href="web01.html" target="box">web01.html</a></li>
+            <li><a href="web02.html" target="box">web02.html</a></li>
+            <li><a href="web03.html" target="box">web03.html</a></li>
+            <li><a href="images/gongyoo.jfif" target="box">피로한데 공유나 보자</a></li>
+        </ul>
+        <iframe src="web01.html" frameborder="2"
+        width="500" height="500" name="box"></iframe>
+    </div>
+</body>
+</html>
+
+<hr>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emmet</title>
+</head>
+<body>
+    <h1>emmet</h1>
+
+    <!-- 
+    // Emmet 코딩 방식으로 HTML 입력하기
+태그명1+태그명2... [ctrl+spaceBar]
+태그명*3 [ctrl+spaceBar]  반복
+태그명1>태그명2...
+$ 자동숫자증감
+{} 내용입력
+() 그룹핑
+[] 속성  
+-->
+
+
+<!-- h1+hr+h2 [ctrl+spaceBar] -->
+   <!-- h1{제목1}+hr+h2{제목2}  [ctrl+spaceBar] -->
+   <h1>제목1</h1>
+   <hr>
+   <h2>제목2</h2>
+   <!-- ul>li{목록$}*5 -->
+   <ul>
+     <li>목록1</li>
+     <li>목록2</li>
+     <li>목록3</li>
+     <li>목록4</li>
+     <li>목록5</li>
+   </ul>
+
+
+    <hr>
+    <!-- table>(tr>td{데이터$}*3)*3 -->
+    <table>
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+    </table>
+
+    <hr>
+    <!-- table[border=1 align=center]>(tr>td{데이터}*2)*2 -->
+    <table border="1" align="center">
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+        <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+        </tr>
+    </table>
+
+
+    <hr>
+    <!-- 텍스트필드 input : 타입명 -->
+    form>(div>label{제목$}+input:password)
+    <form action="">
+        <div><label for="">제목1</label>
+            <input type="password" name="" id=""></div>
+    </form>
+    
+
+
+
+</body>
+</html>

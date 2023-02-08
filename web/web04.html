@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈_테이블</title>
+</head>
+<body>
+    <h1>퀴즈_테이블</h1>
+    
+    <table border="1" width="400" align="left" cellpadding="10">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    <br><br><br><br><br>
+    
+    <table border="1" width="400" align="center" cellpadding="10">
+        <tr>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td colspan="2"></td>
+            <td></td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <!-- <td></td> -->
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+    </table>
+
+    <br>
+    
+    <table border="1" width="400" align="left" cellpadding="10">
+        <tr>
+            <td rowspan="4"></td>
+            <td></td>
+            <td colspan="2"></td>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <!-- <td></td> -->
+            <td></td>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <!-- <td></td> -->
+            <td colspan="2"></td>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td></td>
+            <!-- <td></td> -->
+            <td></td>
+            <!-- <td></td> -->
+        </tr>
+    </table>
+    
+</body>
+
+</html>
+
+<br><br><br><br><br><br><br>
+
+<hr>
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈_폼문서1</title>
+</head>
+<body>
+    <h1>퀴즈_폼문서1</h1>
+    
+    <table border="1" width="800" height="10" align="left" cellpadding="10">
+        <tr>
+            <th bgcolor="lightskyblue"><ul>
+                <li>인증방식 선택</li>
+            </ul></th> 
+            <td colspan="3">
+                <label for="phonenumber">휴대폰번호</label>
+                <input type="radio" id="phonenumber" name="">
+                <label for="email">이메일</label>
+                <input type="radio" id="email" name="">
+            </td>
+            <!-- <td></td> -->
+
+        </tr>
+
+        <tr>
+            <th bgcolor="lightskyblue">
+                <ul>
+                    <li>휴대폰 번호</li>
+                </ul></th>
+            <td colspan="3">
+                <label for="frontnumber"></label>
+                <select name="" id="frontnumber">
+                <option>010</option>
+                <option value="">010</option>
+                <option value="">011</option>
+                <option value="">016</option>
+                <option value="">017</option>
+                <option value="">018</option>
+                <option value="">019</option>
+        </select>
+                -
+                <label for="middlenum"></label>
+                <input type="middlenum" id="middlenum">
+                -
+                <label for="lastnum"></label>
+                <input type="lastnum" id="lastnum">
+                인증번호요청
+            </td>
+            
+            <!-- <td></td> -->
+        </tr>
+
+        <tr>
+            <th bgcolor="lightskyblue">
+                <ul>
+                    <li>인증번호</li>
+                </ul>
+            </th>
+            <td colspan="3">
+                <label for="pwd"></label>
+                <input type="password" id="pwd">
+            </td>
+            <!-- <td></td> -->
+        </tr>
+
+        <tr>
+            <th bgcolor="lightskyblue">
+                <ul>
+                    <li>이름</li>
+                </ul>
+            </th>
+            <td colspan="3">
+                <label for="name"></label> 
+                <input type="name" id="name">
+                가입자 본인의 실명을 입력하세요
+            </td>
+            <!-- <td></td> -->
+        </tr>
+
+        <tr>
+            <th bgcolor="lightskyblue">
+                <ul>
+                    <li>성별</li>
+                </ul>
+            </th>
+            <td>
+                <label for="gender1">남자</label>
+                <input type="radio" id="gender1" name="gender">
+                <label for="gender2">여자</label>
+                <input type="radio" id="gender2" name="gender">
+            </td>
+            <th bgcolor="lightskyblue">
+                <ul>
+                    <li>생년월일</li>
+                </ul>
+            </th>
+            <td>
+                <label for="userDate">예약날짜</label>
+                <input type="date" name="" id="userDate">
+                        
+            </td>
+
+        </tr>
+
+    </table>
+    
+
+</body>
+
+<br><br><br>
+
+<hr>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈_폼문서2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<h1>퀴즈_폼문서2</h1>
+
+</html>
+
+
+
+            
+            
+            
+            
+
+
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 배우기3</title>
+    <style>
+        /*css 영역*/
+        /* 전체 선택자
+            * {속성:값...} 
+        */
+
+        /*그룹 선택자
+            선택자1, 선택자2....{속성:값 ... }
+        */
+
+        /*ol, ul - 줄간격, 글자 색상, 글머리표, 여백 */
+        ol, ul { line-height: 180%;
+                 padding-left: 50px;
+                 color: brown;
+                 list-style-type: none;
+            }
+
+        /*자손 선택자 = 트리 선택자
+        부모요소선택자 자손선택자 { 속성1:값1; 속성2:값2; ... }
+        */
+        ul li { text-decoration: line-through; }
+        ol li { border-bottom: 1px dashed red; width: 200px;}
+
+         /*직계자식 선택자
+        선택자1 > 선택자2 { 속성1:값1; 속성2:값2; ... }
+        */
+        dl > dt > span {font-size: 1.5em; color: orangered;}
+        dl > dd > span {font-size: 2em; color: darkslategray;font-weight: bold;}
+
+        /* 순서 선택자
+            선택자 : nth-child(n) {속성:값....}
+            선택자 : first-child(n) {속성:값....}
+            선택자 : last-child(n) {속성:값....}
+        */
+
+        #box1 > ul > li { text-decoration: none;}
+        #box1 > ul > li:first-child { color: green;}
+        #box1 > ul > li:last-child { color: red;}
+        #box1 > ul > li:nth-child { color: purple;}
+
+        /* 순서 선택자2
+        선택자 : first-letter {속성:값....} // 문단의 첫글자
+        선택자 : first-line {속성:값....} // 문단의 첫행        
+        */
+        .pBox1::first-letter {
+            background-color: black;
+            color: white;
+            font-size: 1.5em;
+          }
+          .pBox2::first-line {
+            color: crimson;
+            font-weight: bold;
+          }
+        
+        /**/
+        #box2 li { text-decoration: none; font-weight: bold;}
+        #box2 li:nth-child(1) { color: cadetblue;}
+        #box2 li:nth-of-type(2) { color: red;}
+        #box2 li:last-of-type { color: blue;}
+        
+        /* 속성 선택자
+            선택자[html속성=값] {속성:값;....}
+        */
+        #formBox1 input {border: 2px solid gray;}
+        #formBox1 input[type=text] {background-color: lightgoldenrodyellow;}
+        #formBox1 input[type=email] {background-color: lightpink;}
+
+        /*
+            상태지정 선택자
+            선택자: focus {속성:값;....}
+            선택자:blur {속성:값;....}
+            선택자:hover {속성:값;....}
+        */
+
+        /*display : block/inline/none */
+        #formBox2 input { 
+            display: none; 
+                        margin-bottom: 20px;
+                        background-color: lightgoldenrodyellow;}
+
+        #formBox2 input:focus {background-color: lightcyan;}
+        #formBox2 input:hover {background-color: lightslategray;
+                            color: white;}
+        
+
+        /*모든 태그 요소의 여백 초기화*/
+        * {margin: 0; padding: 0;}
+
+    </style>
+</head>
+<body>
+    <h1>css 배우기3</h1>
+    <hr>
+    <h2>언어의 종류</h2>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Python</li>
+    </ol>
+    <hr>
+    <dl>
+        <dt><span>HTML</span>이란?</dt>
+        <dd>웹페이지의 구성요소 삽입<span> 언어</span></dd>
+        <dt><span>CSS</span>란?</dt>
+        <dd>웹페이지 요소를 디자인하는 <span>언어</span></dd>
+    </dl>
+    <hr>
+    <!-- (div#box$>(h2{box$}+ul>li{목록$}*5))*3 -->
+    <div id="box1">
+        <h2>box1</h2>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+    </div>
+    <div id="box2">
+        <h2>box2</h2>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+    </div>
+    <div id="box3">
+        <h2>box3</h2>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+    </div>
+    <hr>
+    <!-- p.pBox${행$입니다.} -->
+    <p class="pBox1">
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+    </p>
+    <hr>
+    <p class="pBox2">
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+        행입니다. <br>
+    </p>
+    <hr>
+    <!-- (form#formBox$>(label{라벨$}+input)*4)*2 -->
+    <form action="" id="formBox1">
+        <label for="">라벨1</label><input type="text"><br>
+        <label for="">라벨2</label><input type="password"><br>
+        <label for="">라벨3</label><input type="email"><br>
+        <label for="">라벨4</label><input type="checkbox"><br>
+    </form>
+
+    <form action="" id="formBox2">
+        <label for="">라벨1</label><input type="text">
+        <label for="">라벨2</label><input type="text">
+        <label for="">라벨3</label><input type="text">
+        <label for="">라벨4</label><input type="text">
+    </form>
+</body>
+</html>

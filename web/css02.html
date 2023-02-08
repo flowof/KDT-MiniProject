@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 배우기2</title>
+    <!-- css 적용 -->
+    <style>
+        /*css 주석*/
+        /* css 정의 영역 */
+        /* 태그선택자=태그재정의
+            태그명{속성:값;...}
+        */
+        /*하이퍼링크 태그선택자 - 밑줄없음. 진하게. 색상*/
+        a { text-decoration: none;font-weight: bold; color: darkgreen;}
+        /* 이미지 태그선택자 - 테두리, 모서리굴림 border-radius */
+        img {border: 3px solid darkslateblue; border-radius: 10px;}
+
+        /*
+        클래스 선택자
+        step1 > 정의
+        .클래스이름{ 속성1:값1; 속성2:값2;...}
+
+        step2> 적용
+        <태그명 class="클래스이름">
+        */
+
+        /* div 태그에 적용할 아이디 선택자 정의 */
+        #box1 {width: 100px; height: 100px; background-color: lightcyan;}
+        #box2 {width: 200px; height: 200px; background-color: lightcoral;}
+
+        /*글자일부에 적용할 클래스 정의*/
+        .text1 { color: red; text-decoration: underline;}
+        .text2 {color: blue; text-decoration: overline;}
+    </style>
+</head>
+<body>
+    <h1>css 배우기2</h1>
+    <hr>
+    <!-- ul>li>a{링크$}*4 -->
+    <ul>
+        <li><a href="#">링크1</a></li>
+        <li><a href="#">링크2</a></li>
+        <li><a href="#">링크3</a></li>
+        <li><a href="#">링크4</a></li>
+    </ul>
+    <hr>
+    <div>
+        <img src="images/images/angel1.png" alt="angel1.png">
+        <img src="images/images/angel2.png" alt="angel1.png">
+        <img src="images/images/angel3.png" alt="angel1.png">
+    </div>
+    <hr>
+    <p>
+        오늘도 좋은 <span class="text1">하루</span> !!! <br><br>
+        오늘도 좋은 <span class="text2">하루</span> !!! <br><br>
+        오늘도 좋은 <span class="text1">하루</span> !!!
+        <!-- span.text1{첫리길도} -->
+        <span class="text1">첫리길도</span>
+        <!-- span.text2{한걸음 부터} -->
+        <span class="text2">한걸음부터</span>
+    </p>
+    <hr>
+    <!-- (div#box$>h2{box$})*2 -->
+    <div id="box1">
+        <h2>box1</h2>
+    </div>
+    <div id="box2">
+        <h2>box2</h2>
+    </div>
+</body>
+</html>

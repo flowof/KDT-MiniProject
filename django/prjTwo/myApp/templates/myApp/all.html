@@ -1,0 +1,25 @@
+<!-- 부모 파일 상속 -->
+{% extends 'myApp/base_student.html' %}
+
+{% block content %}
+<h1>학생 전체 목록</h1>
+<hr>
+{{ student_list }}
+<hr>
+<!-- <QuerySet [<Student: 홍길동>, <Student: 김수철>, <Student: 김자두>]> -->
+    <div class="list-group">
+        {% for row in student_list %}
+        <!-- row.필드명 으로 각각 출력 가능 -->
+        <div class="list-group-item list-group-item-action"> 
+            <b>{{ row.id }}</b> <span>{{ row.s_name }}</span> 
+            <!-- 상세페이지 이동 버튼  -->
+            <a href="/myApp/{{row.id}}/detail/" class="btn btn-primary">상세</a> 
+            <!-- 레코드 삭제 버튼  -->
+            <a href="/myApp/{{row.id}}/wipe/" class="btn btn-danger">삭제</a>
+            <!-- 레코드 수정 버튼  -->
+            <a href="/myApp/{{row.id}}/modify/" class="btn btn-success">수정</a>  
+        </div>
+       {% endfor %}
+    </div>
+
+{% endblock%}
